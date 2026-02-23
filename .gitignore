@@ -1,0 +1,6 @@
+.vscode/
+.vscodium/
+.history/
+.DS_Store
+*.tmp
+node_modules/
