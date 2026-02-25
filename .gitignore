@@ -1,6 +1,35 @@
+# --- EDITORES (VSCodium / VS Code) ---
 .vscode/
 .vscodium/
 .history/
+*.code-workspace
+.ionide/
+
+# --- SISTEMA OPERATIVO (Arch Linux / Linux) ---
 .DS_Store
-*.tmp
+Thumbs.db
+*~
+*.swp
+.cache/
+.bash_history
+lost+found/
+
+# --- DESARROLLO WEB (HTML/CSS/JS) ---
 node_modules/
+.npm
+package-lock.json
+dist/
+build/
+
+# --- SEGURIDAD Y PHP (Vital para tus próximos módulos) ---
+.env
+.env.local
+config.php
+*.log
+vendor/
+composer.lock
+
+# --- ARCHIVOS TEMPORALES ---
+*.tmp
+*.temp
+*.bak
