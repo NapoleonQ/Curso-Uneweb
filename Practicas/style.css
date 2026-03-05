@@ -1,18 +1,4 @@
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: aquamarine;
-    text-align: center;
-    margin:5px;
-}
-
-.barra-superior {
-    border: 3px solid;
-    border-width: 2px;
-    padding: 10px;
-    
+table, th, td {
+    border: 1px red solid;
+    border-collapse: collapse;
 }
