@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        Propiedades de estilo content 1
+        */
+        p[class="parrafo"]{
+            color: red;
+        }
+
+        /*
+        Selectores cuyo nombre de clase contenga la palabra parrafo
+        */
+        
+        p[class*="parrafo"]{
+            color:blue;
+        }
+        
+        /*
+        Selectores cuyo de clase nombre inicia con la palabra uno
+        */
+
+        p[class^="uno"]{
+            color: green
+        }
+
+        /*
+        Selectores cuyo nombre de clase finalice con la palabra "uno"
+        */
+
+        p[class$="uno"]{
+            color: purple;
+        }
+
+        p[class*="aun"]{
+            color: orange;
+        }
+
+        /*
+        Propiedades de estilo content 2
+        */
+
+        #dos p:nth-child(odd){
+            background-color: blue;
+            color: orange;
+        }
+        #dos p:nth-child(even){
+            background-color: aquamarine;
+            color: red;
+        }
+
+        /*
+        Propiedades de estilo content 3
+        */
+
+        #tres p:last-child{
+            color: chartreuse;
+        }
+        #tres p:first-child{
+            color: purple;
+        }
+        #tres p:not(.tercero){
+            background-color: bisque;
+        }
+        #tres p:nth-child(2){
+            color: orange;
+        }
+
+        #principal{
+            text-align: center;
+            display: block;
+            width: 500px;
+            margin-left: 50px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            background-color: #dddddd;
+            border-radius: 20px;
+            /*
+             -o-propiedad: Opera
+             -ms-propiedad: Microsoft
+             -moz-propiedad: Firefox
+             -webkit-propiedad: Chrome o Safari
+            */
+            box-shadow: 5px 5px 5px grey;
+            background:-webkit-linear-gradient(top, #ffffff, blue);
+            /*
+            transform: rotate(-30deg);
+            */
+            /*
+            transform: skew(-30deg);
+            */
+        }
+
+        #principal h2{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        #principal:hover{
+            transform: skew(-30deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo07 - Integracion con CSS</h1>
+    <div id="uno">
+        <p class="parrafouno">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, tenetur corporis consectetur quisquam provident facere neque repellat adipisci. Sed eum atque repellat, quidem at porro.
+        </p>
+        <p class="unoparrafo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio enim architecto atque ipsa molestiae! Quia laudantium temporibus consectetur saepe, deserunt voluptatem qui, ducimus accusamus non suscipit quasi aliquid expedita nulla!
+        </p>
+        <p class="parraunofo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cum, exercitationem mollitia totam voluptates pariatur ad eius placeat repudiandae earum voluptatibus rerum velit nostrum ex.
+        </p>
+        <p class="parrafo">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, velit tempore doloremque aliquid, nisi dolores quam reprehenderit rerum excepturi amet eligendi suscipit impedit officiis facilis eius laboriosam veniam nobis sint?
+        </p>
+    </div>
+    <hr>
+    <div id="dos">
+        <p class="primero">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, tenetur corporis consectetur quisquam provident facere neque repellat adipisci. Sed eum atque repellat, quidem at porro.
+        </p>
+        <p class="segundo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio enim architecto atque ipsa molestiae! Quia laudantium temporibus consectetur saepe, deserunt voluptatem qui, ducimus accusamus non suscipit quasi aliquid expedita nulla!
+        </p>
+        <p class="tercero">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cum, exercitationem mollitia totam voluptates pariatur ad eius placeat repudiandae earum voluptatibus rerum velit nostrum ex.
+        </p>
+        <p class="cuarto">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, velit tempore doloremque aliquid, nisi dolores quam reprehenderit rerum excepturi amet eligendi suscipit impedit officiis facilis eius laboriosam veniam nobis sint?
+        </p>
+    </div>
+    <hr>
+    <div id="tres">
+        <p class="tercero">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, tenetur corporis consectetur quisquam provident facere neque repellat adipisci. Sed eum atque repellat, quidem at porro.
+        </p>
+        <p class="tercero">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio enim architecto atque ipsa molestiae! Quia laudantium temporibus consectetur saepe, deserunt voluptatem qui, ducimus accusamus non suscipit quasi aliquid expedita nulla!
+        </p>
+        <p class="tercero">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cum, exercitationem mollitia totam voluptates pariatur ad eius placeat repudiandae earum voluptatibus rerum velit nostrum ex.
+        </p>
+        <p class="cuarto">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, velit tempore doloremque aliquid, nisi dolores quam reprehenderit rerum excepturi amet eligendi suscipit impedit officiis facilis eius laboriosam veniam nobis sint?
+        </p>
+    </div>
+    <div id="principal">
+        <h2>Holas de estilo cascada (CSS)</h2>
+
+    </div>
+</body>
+</html>

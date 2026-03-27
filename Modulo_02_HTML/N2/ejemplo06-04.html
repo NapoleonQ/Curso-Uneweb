@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo06-03</title>
+</head>
+<body>
+    <h1>Ejemplo06-04 | Web Storage - Session Storage</h1>
+    <div id="contenido"></div>
+    <script>
+        var contenido = document.getElementById('contenido');
+        /*
+        sessionStorage.nombreCurso = "Curso de Html5";
+        sessionStorage.nivelCurso = "Dos";
+        */
+        contenido.innerHTML = "Contenido de las Variables de Session<br>";
+        contenido.innerHTML += sessionStorage.nombreCurso + "<br>";
+        contenido.innerHTML += sessionStorage.nivelCurso; + "<br>";
+        
+
+        console.error(sessionStorage.nombreCurso);
+        console.error(sessionStorage.nivelCurso);
+    </script>
+</body>
+</html>

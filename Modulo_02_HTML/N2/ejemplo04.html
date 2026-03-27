@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/ejemplo04.css">
+    <title>Ejemplo 04 - Audio y Video</title>
+</head>
+<body>
+    <header>
+        <h1>Ejemplo04 - Audio, Video, Source y Track</h1>
+    </header>
+     <nav>
+        <ul>
+            <a href="ejemplo04.html"><li>Inicio</li></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio" target="_blank"><li>Audio</li></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video" target="_blank"><li>Video</li></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/source" target="_blank"><li>Source</li></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track" target="_blank"><li>Track</li></a>
+        </ul>
+    </nav>
+    <div id="contenido">
+        <section>
+            <!--
+            <video src="Video/Prueba.mp4" controls>
+            </video>-->
+            <video controls>
+                <source src="Video/Prueba.mp4" type="video/mp4">
+                <source src="Video/Prueba.ogg" type="video/ogg">
+                <track src="Track/ejemplo04.vtt" 
+                kind="subtitles"
+                label="Español"
+                lang="es">
+                <track src="Track/ejemplo04_ingles.vtt" 
+                kind="subtitles"
+                label="Ingles"
+                lang="en">
+            </video>
+        </section>
+        <aside>
+            <!--
+            <audio src="Audio/alexgrohl-energetic-action-sport-500409.mp3" controls>
+            </audio>
+            -->
+            <audio controls>
+                <source src="Audio/alexgrohl-energetic-action-sport-500409.mp3" type="audio/mp3">
+                <source src="Audio/alexgrohl-energetic-action-sport-500409.ogg" type="audio/ogg">
+                <source src="Audio/alexgrohl-energetic-action-sport-500409.opus" type="audio/opus">
+            </audio>
+        </aside>
+    </div>
+    <footer>
+        Curso HTML N2, Uneweb - &copy;2026
+    </footer>
+</body>
+</html>

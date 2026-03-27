@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo060-01</title>
+</head>
+<body>
+    <h1>Ejemplo060-01 | Web Storage - localStorage</h1>
+    <div id="contenido">
+     // Se comprobo la verificacion   
+    </div>
+    <script>
+        var contenido = document.getElementById("contenido");
+        if (typeof(Storage) !== 'undefined'){
+            contenido.innerHTML = "El navegador soporta Almacenamiento local mediante la API WebStorage - LocalStorage<br>";
+        }else{
+            contenido.innerHTML = "El navegador no soporta el almacenamiento local mediante la API WebStorage - LocalStorage<br>";
+        }
+
+     // Asignaicion de datos que permaneceran en el navegador
+     localStorage.nombreCurso = "Curso de HTML5";
+     localStorage.nivelCurso = "DOS";
+     
+     // Recuperacion del Dato contenido en el navegador
+     console.warn(localStorage.nombreCurso);
+     console.warn(localStorage.nivelCurso);
+     
+     contenido.innerHTML += "Contenido almacenado:<br>" + localStorage.nombreCurso + "<br>" + localStorage.nivelCurso + "<br>"
+
+     //eliminacion del dato
+     /*
+     localStorage.removeItem('nombreCurso');
+     localStorage.removeItem('nivelCurso');
+     
+     console.error(localStorage.nombreCurso);
+     console.error(localStorage.nivelCurso);
+     */
+
+     
+    </script>
+</body>
+</html>

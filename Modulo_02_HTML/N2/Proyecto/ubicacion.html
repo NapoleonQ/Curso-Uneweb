@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Img/tux.jpg">
+    <title>Mi Ubicación</title>
+</head>
+<body>
+    
+    <header class="header"><h1>Mi Ubicación</h1></header>
+    
+    <div class="row">
+        <nav class="col-3 col-s-3 menu">
+            <ul><li><a href="index.html">Volver al Inicio</a></li></ul>
+        </nav>
+        <main class="col-9 col-s-9">
+            <button onclick="obtener()">¿Dónde estoy?</button>
+            <p id="coordenadas"></p>
+            <figure>
+                <!--no es muy creativo esto-->
+                <img src="Img/tux.jpg" alt="Mascota Tux" width="300" height="300" >
+            </figure>
+        </main>
+    </div>
+    
+    <footer class="footer"><p>Evaluación Final - Napoleón Quintana | &copy;2026 Uneweb Instituto de Comunicación Web</p></footer>
+    
+    <script>
+        function obtener() {
+            var mensaje = document.getElementById("coordenadas");
+            if (navigator.geolocation) {
+                // intento obtener la posición
+                navigator.geolocation.getCurrentPosition(
+                    // 1 si funciona:
+                    pos => {
+                        mensaje.innerHTML = "<br><strong>Latitud:</strong> " + pos.coords.latitude + 
+                                        "<br><strong>Longitud:</strong> " + pos.coords.longitude;
+                    },
+                    // 2 si no:
+                    () => {
+                        mensaje.innerHTML = "<br><span style='color: red;'>Error: No se pudo acceder a la ubicación.</span>";
+                    }
+                );
+            } else {
+                mensaje.innerHTML = "<br>Su navegador no soporta geolocalización.";
+            }
+        }
+    </script>
+</body>
+</html>

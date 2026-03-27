@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Avanzados</title>
+    <link rel="stylesheet" href="style/ejemplo02.css">
+  </head>
+  <body>
+      <h1>Tema 2 - Formularios</h1>
+      <form action="" method="get" oninput="rango_salida.value = rango_entrada.value;document.getElementById('progress').value = rango_entrada.value;document.getElementById('meter').value = rango_entrada.value">
+        <table>
+          <body>
+            <tr>
+              <td>NOMBRE:</td>
+              <td>
+                <input type="text" name="nombre" id="nombre">
+              </td>
+            </tr>
+            <tr>
+              <td>EDAD:</td>
+              <td>
+                <input type="number" name="edad" id="edad" min="0" max="120">
+              </td>
+            </tr>
+            <tr>
+              <td>SEXO:</td>
+              <td>
+                <input type="radio" name="sexo" id="sexo" value="F" checked>Femenino
+                <input type="radio" name="sexo" id="sexo" value="M">Masculino
+              </td>
+            </tr>
+            <tr>
+              <td>ACTIVIDAD:</td>
+              <td>
+                <input type="checkbox" name="actividad[]" id="actividad" value="estudia" multiple>Estudia
+                <input type="checkbox" name="actividad[]" id="actividad" value="trabaja" multiple>Trabaja
+                <input type="checkbox" name="actividad[]" id="actividad" value="otra" multiple>Otra
+              </td>
+            </tr>
+            <tr>
+              <td>NIVEL DE INSTRUCCION:</td>
+              <td>
+                <select name="instruccion" id="instruccion">
+                  <option value="PRIMARIA">PRIMARIA</option>
+                  <option value="SECUNDARIA">SECUNDARIA</option>
+                  <option value="SUPERIOR">SUPERIOR</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>FECHA DE NACIMIENTO:</td>
+              <td>
+                <input type="date" name="fechadenacimiento" id="fechadenacimiento">
+              </td>
+            </tr>
+            <tr>
+              <td>FECHA Y HORA:</td>
+              <td><input type="datetime-local" name="fecha_hora" id="fecha_hora"></td>
+            </tr>
+            <tr>
+              <td>HORA:</td>
+              <td><input type="time" name="hora" id="hora"></td>
+            </tr>
+            <tr>
+              <td>SEMANA:</td>
+              <td>
+                <input type="week" name="semana" id="semana">
+              </td>
+            </tr>
+            <tr>
+              <td>MES:</td>
+              <td><input type="month" name="mes" id="mes"></td>
+            </tr>
+            <tr>
+              <td>RANGO:</td>
+              <td>
+                <input type="range" name="rango_entrada" id="rango_entrada" min="0" max="100" value="0">
+                <output name="rango_salida">0</output>
+              </td>
+            </tr>
+            <tr>
+              <td>METER:</td>
+              <td>
+                <meter low="33" min="0" max="100" optimum="80" high="66" id="meter"></meter>
+              </td>
+            </tr>
+            <tr>
+              <td>PROGRESS:</td>
+              <td>
+                <progress min="0" max="100" value="0" id="progress"></progress>
+              </td>
+            </tr>
+            <tr>
+              <td>URL:</td>
+              <td><input type="url" name="url" id="url"></td>
+            </tr>
+            <tr>
+              <td>BUSCAR</td>
+              <td><input type="search" name="buscar" id="buscar"></td>
+            </tr>
+            <tr>
+              <td>CORREO ELECTRONICO:</td>
+              <td><input type="email" name="correo" id="correo"></td>
+            </tr>
+            <tr>
+              <td>COLOR:</td>
+              <td><input type="color" name="color" id="color"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center">
+                <input type="submit" value="GUARDAR">
+                <input type="reset" value="BORRAR">
+              </td>
+                <input type="hidden" name="secreto" id="secreto">   
+            </tr>
+          </body>
+        </table>
+      </form>
+  </body>
+</html>

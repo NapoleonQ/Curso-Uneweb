@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo06-02 Recuperacion del contenido LocalStorage</h1>
+    <div id="contenido"></div>
+    <script>
+        var contenido = document.getElementById("contenido");
+
+        // Recuperacion del Dato contenido en el navegador
+        console.warn(localStorage.nombreCurso);
+        console.warn(localStorage.nivelCurso);
+        
+        contenido.innerHTML += "Contenido almacenado:<br>" + localStorage.nombreCurso + "<br>" + localStorage.nivelCurso + "<br>"
+    </script>
+</body>
+</html>
