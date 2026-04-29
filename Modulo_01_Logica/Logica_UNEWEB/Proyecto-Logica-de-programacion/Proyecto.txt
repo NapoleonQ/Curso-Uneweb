@@ -1,0 +1,69 @@
+_Napoleon Quintana_
+//Enunciado: 
+    Crear un algoritmo que reciba como datos de entrada tres (3) números enteros e imprima como resultado cuál número de los ingresados es el mayor y cuál es el segundo mayor.
+    Luego de imprimir el resultado, se debe preguntar al usuario si desea repetir el programa, asuma que el mismo lo indicará ingresando la palabra SI o NO.
+    Dependiendo la respuesta suministrada por el usuario, el algoritmo debe ser capaz de realizar la repetición o detención del programa.
+
+    Ejemplo:
+    Entrada:
+    Ingrese tres números enteros:
+    23
+    56
+    12
+
+    Salida:
+    El número mayor es: 56 y el segundo mayor es el número: 23
+    Desea Repetir el programa: SI-NO//
+
+//Solucion propuesta:
+main {
+    int n1, n2, n3;
+    int mayor, segundo;
+    String respuesta;
+
+    // Se empieza con SI para que entre al ciclo la primera vez
+    respuesta = "SI";
+
+    while (respuesta == "SI") {
+        print("Introduzca un numero entero: ");
+    read(n1);
+    print("Introduzca otro numero entero: ");
+    read(n2);
+    print("Introduzca el ultimo numero entero: ");
+    read(n3);
+
+        // Se busca el busca el mayor y el segundo mayor
+        if (n1 >= n2 && n1 >= n3) {
+            mayor = n1;
+            if (n2 >= n3) {
+                segundo = n2;
+            } else {
+                segundo = n3;
+            }
+        } 
+        else if (n2 >= n1 && n2 >= n3) {
+            mayor = n2;
+            if (n1 >= n3) {
+                segundo = n1;
+            } else {
+                segundo = n3;
+            }
+        } 
+        else {
+            mayor = n3;
+            if (n1 >= n2) {
+                segundo = n1;
+            } else {
+                segundo = n2;
+            }
+        }
+
+        // Se muestra el resultado
+        print("El número mayor es: " + mayor + " y el segundo mayor es: " + segundo);
+
+        print("Desea Repetir el programa: SI-NO");
+        read(respuesta);
+    }
+        // Si la respuesta es NO 
+        print("Gracias por usar el programa");
+}

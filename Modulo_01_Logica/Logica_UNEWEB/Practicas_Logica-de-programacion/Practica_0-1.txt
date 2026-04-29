@@ -1,0 +1,88 @@
+_Napoleon Quintana_
+//Ejercicio propuesto N1: 
+    Dados tres números enteros A, B y C, determine ¿cuál de ellos es el mayor? y ¿cuál es el segundo mayor?//
+
+main {
+    int a, b, c;
+
+    print("introduzca un numero entero: ");
+    read(a);
+    print("introduzca otro numero entero: ");
+    read(b);
+    print("introduzca el ultimo numero entero: ");
+    read(c);
+
+    // Caso N1: Si "a" es el mayor
+    if (a >= b && a >= c) {
+        print("el mayor es " + a);
+        if (b >= c) {
+            print("el segundo mayor es " + b);
+        } else {
+            print("el segundo mayor es " + c);
+        }
+    } 
+    // Caso N2: Si "b" es el mayor
+    else if (b >= a && b >= c) {
+        print("el mayor es " + b);
+        if (a >= c) {
+            print("el segundo mayor es " + a);
+        } else {
+            print("el segundo mayor es " + c);
+        }
+    } 
+    // Caso N3: Si "c" es el mayor (por descarte)
+    else {
+        print("el mayor es " + c);
+        if (a >= b) {
+            print("el segundo mayor es " + a);
+        } else {
+            print("el segundo mayor es " + b);
+        }
+    }
+}
+//Nota: Acomode algunos errores que tenian las "{}" 
+
+//Mi practica:
+main {
+    int a, b, c;
+    int mayor, segundo;
+    
+    print("introduzca un numero entero: ");
+    read(a);
+    print("introduzca otro numero entero: ");
+    read(b);
+    print("introduzca el ultimo numero entero: ");
+    read(c);
+
+    // Caso N1: Si "a" es el más grande
+    if (a >= b && a >= c) {
+        mayor = a;
+        if (b >= c) {
+            segundo = b;
+        } else {
+            segundo = c;
+        }
+    } 
+    // Caso N2: Si "b" es el más grande
+    else if (b >= a && b >= c) {
+        mayor = b;
+        if (a >= c) {
+            segundo = a;
+        } else {
+            segundo = c;
+        }
+    } 
+    // Caso N3: Si "c" es el más grande
+    else {
+        mayor = c;
+        if (a >= b) {
+            segundo = a;
+        } else {
+            segundo = b;
+        }
+    }
+
+    // Al final, solo se imprime una vez los resultados
+    print("El numero mayor es: " + mayor);
+    print("El segundo mayor es: " + segundo);
+}

@@ -1,0 +1,73 @@
+_Napoleon Quintana_
+//Ejercicio propuesto N3:
+    Construya una función que solicite edades al usuario y determine el promedio de las edades mayores a 18 años. El usuario indicará cuando desea dejar de suministrar datos de entrada. En la Acción Principal se informará el promedio calculado.//
+
+// Función que se encarga de pedir las edades y calcular el promedio
+float calculoEdades() {
+    float promedioEdades;
+    int edad, sumaEdades = 0, cantidadEdadesSuministradas = 0;
+    String continuar;
+
+    do {            
+        print("Introduzca una edad: ");
+        read(edad);
+
+        // Se cuentan cuántas personas se ingresan
+        cantidadEdadesSuministradas++;
+        // Se acumula la suma de todas las edades
+        sumaEdades = sumaEdades + edad;
+
+        print("Desea continuar si - no: ");
+        read(continuar);
+
+    } while (continuar == "si");
+
+    // Se calcula el promedio final
+    promedioEdades = sumaEdades / cantidadEdadesSuministradas;    
+    // Y se devuelve el resultado al programa principal
+    return promedioEdades;
+}
+    
+main {
+    float promedio;
+    
+    // Se llama a la función y se guarda su resultado en la variable "promedio"
+    promedio = calculoEdades();
+    
+    print("El promedio de las edades suministradas es: " + promedio);
+}
+Nota: Limpie el codigo y he añadido algunos comentarios
+
+//Mi practica:
+
+// Hago una función puramente matemática que solo calcule el promedio
+float calcularPromedio(int suma, int cantidad) {
+    if (cantidad > 0) {
+        return suma / cantidad;
+    } else {
+        return 0;
+    }
+}
+
+main {
+    int edad, sumaEdades = 0, contador = 0;
+    String continuar;
+    float resultado;
+
+    // El programa principal se encarga de la interacción
+    do {
+        print("Introduzca una edad: ");
+        read(edad);
+        
+        sumaEdades = sumaEdades + edad;
+        contador++;
+
+        print("Desea continuar? si - no: ");
+        read(continuar);
+    } while (continuar == "si");
+
+    // Y se llama a la función pasándole los totales
+    resultado = calcularPromedio(sumaEdades, contador);
+
+    print("El promedio final es: " + resultado);
+}

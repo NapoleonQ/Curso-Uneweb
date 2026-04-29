@@ -1,0 +1,25 @@
+_Napoleon Quintana_
+// Ejercicio propuesto N2:
+    Dado un número entero positivo N determinar si es un número primo. Nota: Un número primo es aquel que solo es divisible por 1(uno) y por el mismo.//
+
+main {
+    int numero, cont = 0;
+    
+    print("Introduzca el numero: ");
+    read(numero);
+      
+    // Se inicia un ciclo desde 1 hasta el número ingresado
+    for (int i = 1; i <= numero; i++) {
+        if (numero % i == 0) {
+            cont++; // Se cuenta divisores tiene
+        }
+    } 
+
+    // Se muestran los resultados, un numero es primo si tiene 2 divisores
+    if (cont <= 2) {
+        print("El numero es Primo");
+    } else {
+        print("El numero No es Primo");
+    }
+}
+//Nota: Use este pseudo-codigo para análisis más que todo

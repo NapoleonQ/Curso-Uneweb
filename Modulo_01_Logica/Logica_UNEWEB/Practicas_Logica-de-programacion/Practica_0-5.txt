@@ -1,0 +1,57 @@
+_Napoleon Quintana_
+//Ejercicio Resuelto Tema N8:
+    En una empresa pagan según las horas trabajadas y una tarifa fija por hora. 
+    Si la cantidad de horas trabajadas en una semana es mayor a 40, la tarifa se incrementa en un 35% para las horas extras. 
+    Escribe una acción principal que solicite la identificación de 5 empleados, el monto cancelado por hora,
+    y la cantidad de horas trabajadas por cada uno,
+    llame a acciones/funciones que calculen el salario semanal por horas trabajadas (<=40) 
+    y los ingresos por concepto de horas extras, y finalmente informe los resultados en la acción principal.//
+
+//Solucion Propuesta:
+
+// La función 1: calcula solo el pago de las horas normales (max 40)
+float calcularPagoNormal(float horas, float tarifa) {
+    if (horas > 40) {
+        return 40 * tarifa;
+    } else {
+        return horas * tarifa;
+    }
+}
+
+// La función 2: calcula el dinero extra ganado (35% adicional)
+float calcularPagoExtra(float horas, float tarifa) {
+    if (horas > 40) {
+        float cantidadExtras = horas - 40;
+        return cantidadExtras * (tarifa * 1.35); // Pago de la hora + el 35%
+    } else {
+        return 0; // si no trabajó horas extras, el extra es 0
+    }
+}
+
+main {
+    float horas, tarifa, pagoNormal, pagoExtra, sueldoTotal;
+    String nombre;
+
+    for (int i = 1; i <= 5; i++) {
+        print("Empleado " + i + " - Introduzca su nombre:");
+        read(nombre);
+        
+        print("Introduzca las horas trabajadas:");
+        read(horas);
+        
+        print("Introduzca la tarifa por hora:");
+        read(tarifa);
+
+        // Se llama a las dos funciones
+        pagoNormal = calcularPagoNormal(horas, tarifa);
+        pagoExtra = calcularPagoExtra(horas, tarifa);
+        
+        sueldoTotal = pagoNormal + pagoExtra;
+
+        // Se muestran los resultados
+        print("El empleado: " + nombre);
+        print("Pago normal: " + pagoNormal);
+        print("Pago extra: " + pagoExtra);
+        print("Sueldo total a cobrar: " + sueldoTotal);
+    }
+}

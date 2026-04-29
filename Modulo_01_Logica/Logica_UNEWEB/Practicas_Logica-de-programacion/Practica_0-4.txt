@@ -1,0 +1,46 @@
+_Napoleon Quintana_
+//Ejercicio Resuelto Tema N7:
+    Escriba una acción (MillasAKilometros) que convierta una distancia en millas a 
+    kilómetros (1milla = 1.60935km). Esta acción recibirá como parámetros: el nombre
+    de la ciudad origen, el nombre de la ciudad destino y la distancia en millas entre
+    ellas y debe retornar la distancia entre las ciudades en kilómetros.
+    Desarrolle además una acción principal en donde utilice a la acción
+    MillasAKilometros para convertir e informar la distancia en kilómetros entre las ciudades.
+
+    - Entrada:
+    Ciudad A
+    Ciudad B
+    332
+    - Salida:
+    Entre la Ciudad A y la Ciudad B hay 534.30 Km.//
+
+//Solucion propuesta:
+
+void MillasAKilometros(String origen, String destino, float millas) {
+    
+    // Se declara la variable para el cálculo
+    float km;
+    
+    // Se realiza la operación 
+    km = millas * 1.60935;
+
+    // Y se imprime el resultado final
+    print("Entre la ciudad: " + origen + " y la ciudad: " + destino + " hay una distancia de: " + km + " km");
+}
+
+main {
+    String ciudadOrigen, ciudadDestino;
+    float distanciaMillas;
+
+    print("Ingrese la ciudad de origen: ");
+    read(ciudadOrigen);
+
+    print("Ingrese la ciudad de destino: ");
+    read(ciudadDestino);
+
+    print("Ingrese la distancia en millas: ");
+    read(distanciaMillas);
+
+    // Se llama a la acción enviando los tres datos requeridos
+    MillasAKilometros(ciudadOrigen, ciudadDestino, distanciaMillas);
+}
